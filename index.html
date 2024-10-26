@@ -8,23 +8,34 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <form class="form" action="адреса куди відправляється наша форма" method="GET що буде відбуватися з нашими даними">
-      <h2>Sign in</h2>
-      <label
-        >Enter your email<input
-          type="text"
-          placeholder="example@gmail.com"
-          autofocus
-      /></label>
 
-      <label for="password"> Enter your password</label>
-        <input
-          type="password"
-          placeholder="Qwerty123" id="password"
-      />
+    <form class="form" action="" method="">
 
-      <button type="submit">Sigh in</button>
-      <button type="reset">Reset</button>
+        <h2>Sign in</h2>
+
+        <label for="name">Ім'я</label>
+        <input type="text" placeholder="Вадим" id="name" autofocus name="name">
+
+        <label for="email">Електронна пошта:</label>
+        <input type="mail" placeholder="example@mail.com" id="email" name="mail">
+
+        <label for="password">Пароль:</label>
+        <input type="password" placeholder="qwerty123" id="password" name="password">
+
+        <label for="phone">Телефон:</label>
+        <input type="phone" placeholder="0995874135" id="phone">
+
+        <label for="address">Адреса:</label>
+        <input type="Address" placeholder="вул. Микитинська, буд...." id="address" name="address">
+
+        <label for="birthday">Дата народження:</label>
+        <input type="date" placeholder="birthday" id="birthday" name="birthday">
+
+         <button type="submit">Submit</button>
+         <button type="reset">Reset</button>
+
     </form>
+
+
   </body>
 </html>
