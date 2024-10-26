@@ -14,16 +14,16 @@
         <h2>Sign in</h2>
 
         <label for="name">Ім'я</label>
-        <input type="text" placeholder="Вадим" id="name" autofocus name="username">
+        <input type="text" placeholder="Вадим" id="name" autofocus name="username" pattern="^[a-z0-9_-]{3,15}$">
 
         <label for="email">Електронна пошта:</label>
-        <input type="email" placeholder="example@mail.com" id="email" name="email">
+        <input type="text" placeholder="example@mail.com" id="email" name="email" pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+">
 
         <label for="password">Пароль:</label>
-        <input type="password" placeholder="qwerty123" id="password" name="password">
+        <input type="password" placeholder="qwerty123" id="password" name="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"">
 
         <label for="phone">Телефон:</label>
-        <input type="text" placeholder="0995874135" id="phone">
+        <input type="text" placeholder="0995874135" id="phone" pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$">
 
         <label for="address">Адреса:</label>
         <input type="text" placeholder="вул. Микитинська, буд...." id="address" name="address">
