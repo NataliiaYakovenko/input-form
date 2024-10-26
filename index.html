@@ -8,85 +8,104 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-
     <form class="form" action="" method="">
+      <h2>Sign in</h2>
 
-        <h2>Sign in</h2>
+      <label for="name">Ім'я</label>
+      <input
+        type="text"
+        placeholder="Вадим"
+        id="name"
+        autofocus
+        name="username"
+        required
+        pattern="^[a-z0-9_-]{3,15}$"
+      />
 
-        <label for="name">Ім'я</label>
-        <input type="text" placeholder="Вадим" id="name" autofocus name="username" required pattern="^[a-z0-9_-]{3,15}$">
+      <label class="recvired" for="email">Електронна пошта:</label>
+      <input
+        type="text"
+        placeholder="example@mail.com"
+        id="email"
+        name="email"
+        required
+        pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+"
+      />
 
-        <label class="recvired" for="email">Електронна пошта:</label>
-        <input type="text" placeholder="example@mail.com" id="email" name="email" required pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+">
+      <label for="password">Пароль:</label>
+      <input type="password" placeholder="qwerty123" id="password"
+      name="password"
+      pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"">
 
-        <label for="password">Пароль:</label>
-        <input type="password" placeholder="qwerty123" id="password" name="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"">
+      <label for="phone">Телефон:</label>
+      <input
+        type="text"
+        placeholder="0995874135"
+        id="phone"
+        pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
+      />
 
-        <label for="phone">Телефон:</label>
-        <input type="text" placeholder="0995874135" id="phone" pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$">
+      <label for="address">Адреса:</label>
+      <input
+        type="text"
+        placeholder="вул. Микитинська, буд...."
+        id="address"
+        name="address"
+      />
 
-        <label for="address">Адреса:</label>
-        <input type="text" placeholder="вул. Микитинська, буд...." id="address" name="address">
+      <label for="birthday">Дата народження:</label>
+      <input type="date" placeholder="birthday" id="birthday" name="birthday" />
 
-        <label for="birthday">Дата народження:</label>
-        <input type="date" placeholder="birthday" id="birthday" name="birthday">
-
-        <fieldset>
-            <legend>Choose your gender</legend>
-            <label>
-                <input type="radio" value="Mail" name="gender" checked>
-                Mail
-            </label>
-    
-            <label>
-                <input type="radio" value="Femail" name="gender">
-                Femail
-            </label>
-    
-            <label>
-                <input type="radio" value="Nonbinore" name="gender">
-                Nonbinore
-            </label>
-        </fieldset>
-
-        <fieldset>
-            <legend>Choose your avatar</legend>
-            <input type="file" multiple name="avatar">
-            </fieldset>
-
+      <fieldset>
+        <legend>Choose your gender</legend>
         <label>
-            <input type="checkbox" name="is-agree" checked required>
-            Чи погоджуєтись ви з нашею політикою?
+          <input type="radio" value="Mail" name="gender" checked />
+          Mail
         </label>
 
-        <fieldset>
-            <legend>Choose your city</legend>
-            <select name="city">
-                <option value="Kiev">Київ</option>
-                <option value="Dnipro">Дніпро</option>
-                <option value="Poltava">Полтава</option>
-                <option value="Zaporizhzha">Запоріжжя</option>
-                <option value="Lviv">Львів</option>
-                <optgroup label="Запорізька область">
-                    <option value="Zaporizhzha">Запоріжжя</option>
-                    <option value="Vasislivka">Василівка</option>
-                    <option value="Melitopol">Мелітополь</option>
-                </optgroup>
-            </select>
-        </fieldset>
+        <label>
+          <input type="radio" value="Femail" name="gender" />
+          Femail
+        </label>
 
         <label>
-            <input type="checkbox" name="is-subscribed" checked>
-            Чи хочете ви від нас отримувати новини? спам
+          <input type="radio" value="Nonbinore" name="gender" />
+          Nonbinore
         </label>
-        
-        
+      </fieldset>
 
-         <button type="submit">Зареєструватися</button>
-         <button type="reset">Очистити</button>
+      <fieldset>
+        <legend>Choose your avatar</legend>
+        <input type="file" multiple name="avatar" />
+      </fieldset>
 
+      <label>
+        <input type="checkbox" name="is-agree" checked required />
+        Чи погоджуєтись ви з нашею політикою?
+      </label>
+
+      <fieldset>
+        <legend>Choose your city</legend>
+        <input type="text" name="city" list="city-list" />
+        <datalist id="city-list">
+          <option value="Kiev"></option>
+          <option value="Dnipro"></option>
+          <option value="Poltava"></option>
+          <option value="Zaporizhzha"></option>
+          <option value="Lviv"></option>
+          <option value="Zaporizhzha"></option>
+          <option value="Vasislivka"></option>
+          <option value="Melitopol"></option>
+        </datalist>
+      </fieldset>
+
+      <label>
+        <input type="checkbox" name="is-subscribed" checked />
+        Чи хочете ви від нас отримувати новини? спам
+      </label>
+
+      <button type="submit">Зареєструватися</button>
+      <button type="reset">Очистити</button>
     </form>
-
-
   </body>
 </html>
